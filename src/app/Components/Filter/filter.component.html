@@ -1,0 +1,14 @@
+<div class="bg-colorCard shadow-md relative text-nowrap cursor-pointer rounded-md">
+
+    <div class="flex gap-[15px] py-[10px] px-[20px]" (click)="showF()">
+        <p class="w-[129px]">{{filterSelect}}</p> 
+        <span class="material-symbols-outlined {{showFilter ? 'rotate-[180deg]' : ''}} transition-transform" translate="no">expand_more</span>
+    </div>
+
+    <div class="absolute left-0 mt-[10px] w-full py-[10px] px-[10px] bg-colorCard shadow-md z-50 {{showFilter ? ' ' : ' hidden '}} rounded-md">
+        @for (item of filterArray; track $index) {
+            <p class="px-[5px] py-[5px] {{item.countryFilter != '' ? ' hover:font-semibold ' : '  text-slate-500 '}}" (click)="clickFilter(item.nameFilter)">{{item.nameFilter}}</p>
+        }
+    </div>
+
+</div>

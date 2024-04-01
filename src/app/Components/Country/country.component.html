@@ -1,0 +1,17 @@
+<main class="w-screen px-[100px] py-[80px]">
+    <div class="w-full flex items-center h-[80px] justify-between">
+        <app-input
+            (eventEmitterInput)="receiveEmitterInput($event)"
+        />
+
+        <app-filter
+            (eventEmitterFilter)="receiveEmitterFilter($event)"    
+        />
+    </div>
+
+    <app-card
+        [valueSearch]="valueSearchReceive"
+        [valueFilter]="valueFilterReceive"
+    />
+
+</main>
