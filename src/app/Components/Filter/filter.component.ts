@@ -21,7 +21,7 @@ export class FilterComponent implements OnInit{
 
     ngOnInit(): void {
         setTimeout(() => {
-            this.clickFilter('Filter By Country')
+            this.clickFilter("Filter By Country")
         }, 10)
     }
 

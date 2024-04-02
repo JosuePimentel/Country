@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, DoCheck } from "@angular/core";
+import { Component, Output, EventEmitter, DoCheck, OnInit } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 @Component({
@@ -8,9 +8,15 @@ import { FormsModule } from "@angular/forms";
     templateUrl: "input.component.html"
 })
 
-export class InputComponent{
+export class InputComponent implements OnInit {
     @Output() eventEmitterInput = new EventEmitter
     searchValue: string = ''
+
+    ngOnInit(): void {
+        setTimeout(() => {
+            this.eventKeyBoard()
+        }, 5)
+    }
 
     eventKeyBoard() {
         this.eventEmitterInput.emit(this.searchValue)

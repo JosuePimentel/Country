@@ -1,12 +1,12 @@
-<main class="w-screen px-[100px] py-[80px]">
+<main class="w-screen px-[100px] py-[80px] flex flex-col gap-[50px]">
     
     <app-back/>
 
-    <div class="flex w-full py-[50px]">
-        <div class="flex items-center overflow-x-hidden w-[600px] h-[400px] rounded-md shadow-md"><img src="{{data.flag}}" alt="{{data.name}}" class="w-full h-full object-cover"></div>
+    <div class="flex w-full items-center justify-between pt-[30px] max-lg:gap-[50px] max-lg:flex-col">
+        <div class="overflow-x-hidden w-[600px] h-[400px] rounded-md shadow-md"><img src="{{data.flag}}" alt="{{data.name}}" class="w-full h-full object-cover"></div>
 
-        <div class="ml-[200px] py-[50px] flex flex-col gap-[30px]">
-            <h4 class="font-bold text-3xl">{{data.name}}</h4>
+        <div class="justify-center flex flex-col gap-[30px]">
+            <h4 class="font-bold text-4xl">{{data.name}}</h4>
 
             <div class="flex h-[130px] flex-wrap flex-col gap-[5px]">
                 <p class="text-sm flex gap-[5px]"><strong>Native Name: </strong><span>{{data.nativeName}}</span></p>
