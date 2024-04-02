@@ -1,0 +1,12 @@
+<div class="flex gap-[15px] w-[400px] flex-wrap">
+    @for (itemBorder of borders; track $index) {
+        @for (itemData of allData; track $index) {
+            @if(itemBorder == itemData.alpha3Code) {
+                <p class="py-[5px] px-[15px] bg-third dark:bg-secondDark transition-colors rounded-md shadow-md">{{itemData.name}}</p>
+            }
+        }
+    }
+    @empty {
+        <p class="py-[5px] px-[15px] bg-third dark:bg-secondDark transition-colors rounded-md shadow-md">Nenhum país vizinho</p>
+    }
+</div>

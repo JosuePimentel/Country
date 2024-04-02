@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, DoCheck } from "@angular/core";
+import { Component, Output, EventEmitter, DoCheck, OnInit } from "@angular/core";
 import { Filter } from "../../../module/types"
 import { FormsModule } from "@angular/forms";
 
@@ -9,7 +9,7 @@ import { FormsModule } from "@angular/forms";
     templateUrl: "filter.component.html"
 })
 
-export class FilterComponent{ 
+export class FilterComponent implements OnInit{ 
     filterArray: Filter[] = [
         {countryFilter: "", nameFilter: "Filter By Country"},
         {countryFilter: "Americas", nameFilter: "Americas"},
@@ -18,6 +18,12 @@ export class FilterComponent{
         {countryFilter: "Oceania", nameFilter: "Oceania"},
         {countryFilter: "Africa", nameFilter: "Africa"}
     ]
+
+    ngOnInit(): void {
+        setTimeout(() => {
+            this.clickFilter('Filter By Country')
+        }, 10)
+    }
 
     showFilter:boolean = false
 

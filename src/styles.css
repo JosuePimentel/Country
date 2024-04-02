@@ -32,3 +32,21 @@
 ::webkit-scrollbar-thumb {
   
 }
+
+@layer components {
+  *:hover > .backAnimation {
+    animation: 1s ease 0s infinite back;
+  }
+}
+
+@keyframes back {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

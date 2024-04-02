@@ -1,12 +1,13 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges, DoCheck } from "@angular/core";
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges, DoCheck, OnInit } from "@angular/core";
 import { CountryData } from "../../../module/types";
 import { CountryService } from "../../Service/Country.Service";
+import { RouterLink } from "@angular/router";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "app-card",
     standalone: true,
-    imports: [],
+    imports: [RouterLink],
     templateUrl: "card.component.html",
 })
 
