@@ -7,10 +7,10 @@ import { CardComponent } from "../Card/card.component";
     selector: "app-country",
     standalone: true,
     imports: [InputComponent, FilterComponent, CardComponent, CardComponent],
-    templateUrl: "country.component.html"
+    templateUrl: "countryHome.component.html"
 })
 
-export class CountryComponent { 
+export class CountryHomeComponent { 
     
     valueSearchReceive: string = ''
     receiveEmitterInput(newValue: string) {

@@ -15,7 +15,8 @@ export class FilterComponent{
         {countryFilter: "Americas", nameFilter: "Americas"},
         {countryFilter: "Asia", nameFilter: "Asia"},
         {countryFilter: "Europe", nameFilter: "Europe"},
-        {countryFilter: "Oceania", nameFilter: "Oceania"}
+        {countryFilter: "Oceania", nameFilter: "Oceania"},
+        {countryFilter: "Africa", nameFilter: "Africa"}
     ]
 
     showFilter:boolean = false

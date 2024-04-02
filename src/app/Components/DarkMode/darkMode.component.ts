@@ -7,4 +7,8 @@ import { Component } from "@angular/core";
     templateUrl: "darkMode.component.html"
 })
 
-export class DarkModeComponent { }
+export class DarkModeComponent {
+    darkMode() {
+        document.documentElement.classList.toggle('dark')
+    }
+}
