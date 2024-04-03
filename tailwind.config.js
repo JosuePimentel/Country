@@ -5,6 +5,9 @@ module.exports = {
   ],
   darkMode: 'selector',
   theme: {
+    screen: {
+      'laptopL': {'max': '1440px'}
+    },
     extend: {
       colors: {
         primaryLight: "rgba(0,0,0,10%)",

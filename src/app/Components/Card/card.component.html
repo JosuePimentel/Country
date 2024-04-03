@@ -1,7 +1,7 @@
-<main class="w-full grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-[50px] py-[50px]">
+<main class="max-md:grid-cols-[1fr] w-full grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-[50px] py-[50px]">
     @for (country of dataSelect; track $index) {
         <div routerLink="/country/{{country.name}}" class="w-full bg-third dark:bg-secondDark  rounded-md overflow-hidden cursor-pointer shadow-md hover:scale-110 transition-all duration-150">
-            <div><img src="{{country.flag}}" alt="flag {{country.name}}" class="w-full h-[250px] object-cover"></div>
+            <div><img src="{{country.flag}}" alt="flag {{country.name}}" class="max-md:h-[200px] max-[375px]:h-[150px] w-full h-[250px] object-cover"></div>
             <div class="py-[20px] px-[20px]">
                 <h4 class="text-[25px] font-bold pb-[5px]">{{country.name}}</h4>
                 <p class="pb-[3px]"><strong>Population: </strong><span>{{country.population.toLocaleString('en')}}</span></p>

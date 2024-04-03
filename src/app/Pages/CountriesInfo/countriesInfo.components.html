@@ -1,30 +1,30 @@
-<main class="w-screen px-[100px] py-[80px] flex flex-col gap-[50px]">
+<main class="max-md:px-[50px] w-screen px-[100px] py-[80px] flex flex-col gap-[50px] max-[425px]:gap-[30px] max-[375px]:px-[25px]">
     
     <app-back/>
 
-    <div class="flex w-full items-center justify-between pt-[30px] max-lg:gap-[50px] max-lg:flex-col">
-        <div class="overflow-x-hidden w-[600px] h-[400px] rounded-md shadow-md"><img src="{{data.flag}}" alt="{{data.name}}" class="w-full h-full object-cover"></div>
+    <div class="flex w-full items-center justify-between pt-[30px] gap-[80px] max-[1440px]:gap-[50px] max-[1440px]:flex-col">
+        <div class="overflow-x-hidden w-full max-w-[600px] rounded-md shadow-md"><img src="{{data.flag}}" alt="{{data.name}}" class="w-full h-full object-cover"></div>
 
-        <div class="justify-center flex flex-col gap-[30px]">
-            <h4 class="font-bold text-4xl">{{data.name}}</h4>
+        <div class="w-full justify-center flex flex-col gap-[30px] max-[1440px]:gap-[20px]">
+            <h4 class="font-bold text-4xl max-md:text-3xl">{{data.name}}</h4>
 
-            <div class="flex h-[130px] flex-wrap flex-col gap-[5px]">
-                <p class="text-sm flex gap-[5px]"><strong>Native Name: </strong><span>{{data.nativeName}}</span></p>
-                <p class="text-sm flex gap-[5px]"><strong>Population: </strong><span>{{data.population.toLocaleString('en')}}</span></p>
-                <p class="text-sm flex gap-[5px]"><strong>Region: </strong><span>{{data.region}}</span></p>
-                <p class="text-sm flex gap-[5px]"><strong>Sub Region: </strong><span>{{data.subregion}}</span></p>
-                <p class="text-sm flex gap-[5px]"><strong>Capital: </strong><span>{{data.capital}}</span></p>
-                <p class="text-sm flex gap-[5px]"><strong>Top Level Domain: </strong><span>{{data.topLevelDomain[0]}}</span></p>
-                <p class="text-sm flex gap-[5px]"><strong>Currencies: </strong><span>@for (item of data.currencies; track $index) {
+            <div class="flex h-[130px] flex-wrap flex-col gap-[5px] max-[400px]:flex-nowrap max-[400px]:h-max">
+                <p class="text-sm flex gap-[5px] max-md:text-xs w-max"><strong>Native Name: </strong><span>{{data.nativeName}}</span></p>
+                <p class="text-sm flex gap-[5px] max-md:text-xs w-max"><strong>Population: </strong><span>{{data.population.toLocaleString('en')}}</span></p>
+                <p class="text-sm flex gap-[5px] max-md:text-xs w-max"><strong>Region: </strong><span>{{data.region}}</span></p>
+                <p class="text-sm flex gap-[5px] max-md:text-xs w-max"><strong>Sub Region: </strong><span>{{data.subregion}}</span></p>
+                <p class="text-sm flex gap-[5px] max-md:text-xs w-max"><strong>Capital: </strong><span>{{data.capital}}</span></p>
+                <p class="text-sm flex gap-[5px] max-md:text-xs w-max"><strong>Top Level Domain: </strong><span>{{data.topLevelDomain[0]}}</span></p>
+                <p class="text-sm flex gap-[5px] max-md:text-xs w-max"><strong>Currencies: </strong><span>@for (item of data.currencies; track $index) {
                     {{item.name}}{{$index != data.currencies.length-1 ? ', ' : ''}}
                 } </span></p>
-                <p class="text-sm flex gap-[5px]"><strong>Languages: </strong><span>@for (item of data.languages; track $index) {
+                <p class="text-sm flex gap-[5px] max-md:text-xs w-max"><strong>Languages: </strong><span>@for (item of data.languages; track $index) {
                     {{item.name}}{{$index != data.languages.length-1 ? ', ' : ''}}
                 } </span></p>
             </div>
 
-            <div class="flex gap-[30px] item-center ">
-                <strong class="flex items-center">Border Countries: </strong>
+            <div class="max-md:gap-[15px] flex gap-[30px] item-center max-[1440px]:flex-col">
+                <strong class="flex items-center max-md:text-sm w-max">Border Countries: </strong>
                 <app-border
                     [borders]="data.borders"
                     [allData]="dataOrigin"

@@ -1,8 +1,10 @@
-<div class="flex gap-[15px] w-[400px] flex-wrap">
+<!-- flex  flex-wrap-->
+
+<div class="flex flex-wrap gap-[15px] w-full max-md:max-w-[400px] ">
     @for (itemBorder of borders; track $index) {
         @for (itemData of allData; track $index) {
             @if(itemBorder == itemData.alpha3Code) {
-                <p class="py-[7px] px-[30px] bg-third dark:bg-secondDark transition-colors rounded-md shadow-md">{{itemData.name}}</p>
+                <p class="max-[400px]:py-[10px] max-[400px]:px-[10px] max-[400px]:text-xs max-md:px-[15px] max-md:text-sm text-wrap py-[7px] px-[30px] bg-third dark:bg-secondDark transition-colors rounded-md shadow-md">{{itemData.name}}</p>
             }
         }
     }
