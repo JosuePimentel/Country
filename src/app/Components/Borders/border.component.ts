@@ -12,4 +12,10 @@ import { RouterLink } from "@angular/router";
 export class BorderComponent { 
     @Input() borders: string[] = []
     @Input() allData: CountryData[] = []
+
+    refresh() {
+        setTimeout(() => {
+            location.reload()
+        }, 100)
+    }
 }

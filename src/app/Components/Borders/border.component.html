@@ -4,7 +4,7 @@
     @for (itemBorder of borders; track $index) {
         @for (itemData of allData; track $index) {
             @if(itemBorder == itemData.alpha3Code) {
-                <p class="max-[400px]:py-[10px] max-[400px]:px-[10px] max-[400px]:text-xs max-md:px-[15px] max-md:text-sm text-wrap py-[7px] px-[30px] bg-third dark:bg-secondDark transition-colors rounded-md shadow-md">{{itemData.name}}</p>
+                <p routerLink="/country/{{itemData.name}}" (click)="refresh()" class="cursor-pointer max-[400px]:py-[10px] max-[400px]:px-[10px] max-[400px]:text-xs max-md:px-[15px] max-md:text-sm text-wrap py-[7px] px-[30px] bg-third dark:bg-secondDark transition-colors rounded-md shadow-md">{{itemData.name}}</p>
             }
         }
     }
