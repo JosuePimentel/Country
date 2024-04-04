@@ -5,8 +5,14 @@ module.exports = {
   ],
   darkMode: 'selector',
   theme: {
-    screen: {
-      'laptopL': {'max': '1440px'}
+    screens: {
+      'LaptopL': {max: '1440px'},
+      'laptop': {max: '1024px'},
+      'Tablet': {max: '768px'},
+      'MobileL': {max: '425px'},
+      'MobileLM': {max: '400px'},
+      'MobileM': {max: '375px'},
+      'MobileS': {max: '320px'}
     },
     extend: {
       colors: {
